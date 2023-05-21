@@ -1,0 +1,158 @@
+<html>
+<title>creative</title>
+<head>
+<style>
+h1{
+text-align:center;
+font-size:35px;
+background-color: coral;
+font-family:Times new roman;
+text-decoration: underline;
+text-shadow: 1px 1px 5px red;
+}
+body{
+background-color:#ffbb99;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5dBobd-PLn2igxeax_JS-X7jU0-GMCLo5iw&usqp=CAU");
+background-repeat: no-repeat;
+background-size: 250px 250px;
+background-position:center bottom;
+}
+.button{
+border-radius:8px;
+font-size: 20px;
+background-color:red;
+color:white;
+}
+</style>
+<script language="javascript">
+function subm() {
+
+  var x = document.getElementById("un").value;
+  var y = document.getElementById("address").value;
+  
+  var c = document.getElementById("mob").value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;}
+if (c == "") {
+    alert("Mobile number must be filled out");
+    return false;}
+  
+if (isNaN(c)) {
+    alert("Mobile number should be number.");
+   return false;
+}
+if (y == "") {
+    alert("Address must be filled out");
+    return false;}
+var d=(document.getElementById("district").value);
+if (d == "") {
+    alert("District must be filled out");
+    return false;}
+
+var a=2021-(document.getElementById("year").value);
+var l=confirm("Your age is "+a);
+if(l==0)
+return false;
+alert("Successfully Completed");
+
+document.write("You have been allotted time slot-9:30 to 4:30 in "+d+" Medical Care Center.");
+document.write("Please Reach by the time slot and take the vaccine safely.An OTP will be sent to the mobile number entered which will have more information.");
+}
+</script>
+</head>
+<body>
+<h1>Vaccination Registeration</h1>
+<form>
+<table>
+<tr><td><b>Enter Name</b></td><td><input type="text" id="un"></td></tr>
+<tr><td><b>Choose Gender</b></td><td>
+<input type="radio" name="gender"/>Female
+<input type="radio" name="gender" checked/>Male
+<input type="radio" name="gender"/>Others</td></tr>
+<tr><td><label><b>Date Of Birth</b></label></td><td colspan="3"><label>Date</label>
+<select name="day">
+<option value="1" selected>1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<label>Month</label>
+<select name="month">
+<option value="Jan" selected>January</option>
+<option value="Feb">February</option>
+<option value="Mar">March</option>
+<option value="Apr">April</option>
+<option value="May">May</option>
+<option value="June">June</option>
+<option value="July">July</option>
+<option value="Aug">August</option>
+<option value="Sept">September</option>
+<option value="Oct">October</option>
+<option value="Nov">November</option>
+<option value="Dec">December</option>
+</select>
+<label>Year</label>
+<select name="year" id="year">
+<option value="1980" >1980</option>
+<option value="1981">1981</option>
+<option value="1982">1982</option>
+<option value="1983">1983</option>
+<option value="1984">1984</option>
+<option value="1985">1985</option>
+<option value="1986">1986</option>
+<option value="1987">1987</option>
+<option value="1988">1988</option>
+<option value="1989">1989</option>
+<option value="1990">1990</option>
+<option value="1991">1991</option>
+<option value="1992">1992</option>
+<option value="1993">1993</option>
+<option value="1994">1994</option>
+<option value="1995">1995</option>
+<option value="1996">1996</option>
+<option value="1997">1997</option>
+<option value="1998">1998</option>
+<option value="1999">1999</option>
+<option value="2000" selected>2000</option>
+</select></td></tr>
+<tr><td><label><b>Mobile Phone</b></label></td><td><input type="text" name="mobile" id="mob" maxsize="10"/></td></tr>
+<tr> <td><label><b>Address</b></label></td><td><input type="text" id="address" required/></td></tr>
+<tr> <td><label><b>District</b></label></td><td><input type="text" id="district" required/></td></tr>
+<tr><td><label><b>Upload Photo</b></label></td>
+<td><input type="file" name="fileupload" accept="image"/></td></tr>
+ 
+</table>
+<br>
+<center><input type="submit" value="Submit" id="sub" class="button" onclick="subm()"/> </center>
+
+</form>
+</body>
+</html>
